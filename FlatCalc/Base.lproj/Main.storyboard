@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="FlatCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rto-bc-Syx" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="282" y="480" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rto-bc-Syx" secondAttribute="height" multiplier="1:1" id="71n-Zh-FYH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.93333333730000001" green="0.5411764979" blue="0.070588238540000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.87058824300000004" green="0.41568627949999998" blue="0.10588235410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jid-3v-QlJ" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="574" width="187" height="93"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="0">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwg-dJ-zNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvf-Wy-Cgj" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="282" y="574" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tvf-Wy-Cgj" secondAttribute="height" multiplier="1:1" id="gSR-gA-AVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="=">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.93333333730000001" green="0.5411764979" blue="0.070588238540000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.87058824300000004" green="0.41568627949999998" blue="0.10588235410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="performCalculation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCZ-MH-9pU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H51-V0-7r3" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="188" y="574" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H51-V0-7r3" secondAttribute="height" multiplier="1:1" id="joc-my-6UW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title=".">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifr-WB-hrD" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="94" y="480" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ifr-WB-hrD" secondAttribute="height" multiplier="1:1" id="XAx-HD-fFu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMb-8x-yO4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-lN-SJh" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="188" y="480" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aqn-lN-SJh" secondAttribute="height" multiplier="1:1" id="kPq-nf-Rbr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rf5-yT-Pel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkQ-qo-gGz" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="480" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HkQ-qo-gGz" secondAttribute="height" multiplier="1:1" id="ozK-3p-oXd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eS-S7-hU3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDM-4H-eYf" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="386" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UDM-4H-eYf" secondAttribute="height" multiplier="1:1" id="Hzr-KC-JED"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJ1-yx-XIh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQt-YJ-aD6" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="94" y="386" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PQt-YJ-aD6" secondAttribute="height" multiplier="1:1" id="sWA-ag-dsX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DL-s7-TVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETt-XD-0Pc" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="188" y="386" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ETt-XD-0Pc" secondAttribute="height" multiplier="1:1" id="dwf-Ae-aim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPf-cl-YVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-Gz-7hT" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="282" y="386" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zDc-Gz-7hT" secondAttribute="height" multiplier="1:1" id="QX0-fT-EWK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.93333333730000001" green="0.5411764979" blue="0.070588238540000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.87058824300000004" green="0.41568627949999998" blue="0.10588235410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEH-Vo-WmD" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="292" width="93" height="93"/>
+                                <color key="backgroundColor" red="0.16862745579999999" green="0.5176470876" blue="0.82352942230000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PEH-Vo-WmD" secondAttribute="height" multiplier="1:1" id="wAi-IV-I8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275064945221" green="0.21960784494876862" blue="0.29411765933036804" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.12941177189350128" green="0.18431372940540314" blue="0.24705882370471954" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUU-nI-K5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-l1-eQK" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="94" y="292" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cVA-l1-eQK" secondAttribute="height" multiplier="1:1" id="afS-eL-vWk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="8">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfe-hw-jmK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6q-WF-rgM" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="188" y="292" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L6q-WF-rgM" secondAttribute="height" multiplier="1:1" id="GVh-KY-SWQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="9">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.15686275059999999" green="0.21960784489999999" blue="0.2941176593" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1294117719" green="0.18431372939999999" blue="0.24705882370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Syp-vq-kq0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2C-U7-qst" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="282" y="292" width="93" height="93"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="x">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.93333333730000001" green="0.5411764979" blue="0.070588238540000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.87058824300000004" green="0.41568627949999998" blue="0.10588235410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-nF-DVj" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="198" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BGz-nF-DVj" secondAttribute="height" multiplier="1:1" id="Q63-jH-lgz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="61.5"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.51372551918029785" green="0.58039218187332153" blue="0.58431375026702881" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.42352941632270813" green="0.47450980544090271" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clearResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ce8-Oh-VY4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckd-s0-etA" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="94" y="198" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ckd-s0-etA" secondAttribute="height" multiplier="1:1" id="4dO-XM-bD6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="57.5"/>
+                                <state key="normal" title="+/-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.51372551919999998" green="0.58039218189999997" blue="0.58431375029999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.42352941630000002" green="0.47450980539999998" blue="0.4784313738" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="flipResultSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcX-t3-cxu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-gc-YkB" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="188" y="198" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tUf-gc-YkB" secondAttribute="height" multiplier="1:1" id="4zo-ce-6Qa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.51372551919999998" green="0.58039218189999997" blue="0.58431375029999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.42352941630000002" green="0.47450980539999998" blue="0.4784313738" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertResultToPercentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kw2-jD-lcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-hs-DX3" customClass="CalculatorButton" customModule="FlatCalc" customModuleProvider="target">
+                                <rect key="frame" x="282" y="198" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ig9-hs-DX3" secondAttribute="height" multiplier="1:1" id="ZmH-EB-zuR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="67.5"/>
+                                <state key="normal" title="/">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.93333333730697632" green="0.54117649793624878" blue="0.070588238537311554" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.87058824300765991" green="0.41568627953529358" blue="0.10588235408067703" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="4jA-tT-wuF">
+                                <rect key="frame" x="16" y="88" width="343" height="102"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="78"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10303802788257599" green="0.091803565621376038" blue="0.097734943032264709" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="trailing" secondItem="HkQ-qo-gGz" secondAttribute="trailing" id="08n-UC-0uY"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="leading" secondItem="tvf-Wy-Cgj" secondAttribute="leading" id="0ET-Mm-YZw"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="leading" secondItem="PQt-YJ-aD6" secondAttribute="trailing" constant="1" id="0VC-lQ-8hU"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="leading" secondItem="UDM-4H-eYf" secondAttribute="trailing" constant="1" id="0wH-wX-07D"/>
+                            <constraint firstItem="H51-V0-7r3" firstAttribute="top" secondItem="aqn-lN-SJh" secondAttribute="bottom" constant="1" id="23q-sa-4Z4"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="top" secondItem="L6q-WF-rgM" secondAttribute="bottom" constant="1" id="2oP-BA-Ceu"/>
+                            <constraint firstItem="4jA-tT-wuF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="3EN-OS-G8F"/>
+                            <constraint firstItem="Ifr-WB-hrD" firstAttribute="leading" secondItem="HkQ-qo-gGz" secondAttribute="trailing" constant="1" id="43J-dt-VfT"/>
+                            <constraint firstItem="jid-3v-QlJ" firstAttribute="top" secondItem="Ifr-WB-hrD" secondAttribute="bottom" constant="1" id="4fX-8q-To7"/>
+                            <constraint firstAttribute="trailing" secondItem="4jA-tT-wuF" secondAttribute="trailing" constant="16" id="4uS-4C-y5B"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="top" secondItem="BGz-nF-DVj" secondAttribute="bottom" constant="1" id="5dq-qe-9id"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="top" secondItem="L6q-WF-rgM" secondAttribute="top" id="6om-rB-hNs"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="leading" secondItem="aqn-lN-SJh" secondAttribute="leading" id="8F9-nc-DJD"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="trailing" secondItem="L6q-WF-rgM" secondAttribute="trailing" id="8lx-ZS-Lq5"/>
+                            <constraint firstItem="tvf-Wy-Cgj" firstAttribute="top" secondItem="jid-3v-QlJ" secondAttribute="top" id="9Me-34-Wru"/>
+                            <constraint firstAttribute="trailing" secondItem="rto-bc-Syx" secondAttribute="trailing" id="9NG-hD-3fN"/>
+                            <constraint firstItem="Ifr-WB-hrD" firstAttribute="top" secondItem="PQt-YJ-aD6" secondAttribute="bottom" constant="1" id="AhV-NV-fOh"/>
+                            <constraint firstItem="jid-3v-QlJ" firstAttribute="top" secondItem="HkQ-qo-gGz" secondAttribute="bottom" constant="1" id="Ahi-up-wuo"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="top" secondItem="cVA-l1-eQK" secondAttribute="bottom" constant="1" id="Ajm-Bd-hrC"/>
+                            <constraint firstItem="tvf-Wy-Cgj" firstAttribute="top" secondItem="rto-bc-Syx" secondAttribute="bottom" constant="1" id="BRd-s4-TxB"/>
+                            <constraint firstItem="UDM-4H-eYf" firstAttribute="top" secondItem="zDc-Gz-7hT" secondAttribute="top" id="BXb-ot-X0I"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="trailing" secondItem="aqn-lN-SJh" secondAttribute="trailing" id="CdB-FX-u5N"/>
+                            <constraint firstItem="UDM-4H-eYf" firstAttribute="top" secondItem="ETt-XD-0Pc" secondAttribute="top" id="D51-2Q-vIv"/>
+                            <constraint firstItem="W2C-U7-qst" firstAttribute="leading" secondItem="L6q-WF-rgM" secondAttribute="trailing" constant="1" id="Dsu-PV-Hex"/>
+                            <constraint firstItem="tvf-Wy-Cgj" firstAttribute="top" secondItem="H51-V0-7r3" secondAttribute="top" id="FH8-SC-WrP"/>
+                            <constraint firstItem="UDM-4H-eYf" firstAttribute="top" secondItem="PEH-Vo-WmD" secondAttribute="bottom" constant="1" id="FjO-iZ-MwS"/>
+                            <constraint firstItem="zDc-Gz-7hT" firstAttribute="leading" secondItem="ETt-XD-0Pc" secondAttribute="trailing" constant="1" id="G0U-qK-GYe"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="trailing" secondItem="H51-V0-7r3" secondAttribute="trailing" id="G2l-h2-Ohi"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="top" secondItem="W2C-U7-qst" secondAttribute="top" id="GWq-ai-ntE"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="leading" secondItem="L6q-WF-rgM" secondAttribute="leading" id="I1g-Nx-eCw"/>
+                            <constraint firstItem="cVA-l1-eQK" firstAttribute="leading" secondItem="PEH-Vo-WmD" secondAttribute="trailing" constant="1" id="IQc-9h-F2z"/>
+                            <constraint firstAttribute="trailing" secondItem="Ig9-hs-DX3" secondAttribute="trailing" id="IeZ-tP-lHI"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="top" secondItem="4jA-tT-wuF" secondAttribute="bottom" constant="8" id="IiC-Pf-QWs"/>
+                            <constraint firstItem="4jA-tT-wuF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="J10-4R-duV"/>
+                            <constraint firstItem="ckd-s0-etA" firstAttribute="top" secondItem="4jA-tT-wuF" secondAttribute="bottom" constant="8" id="KUp-uO-Zio"/>
+                            <constraint firstAttribute="bottom" secondItem="H51-V0-7r3" secondAttribute="bottom" id="LG9-vF-ueG"/>
+                            <constraint firstAttribute="trailing" secondItem="tvf-Wy-Cgj" secondAttribute="trailing" id="LHf-6C-cy4"/>
+                            <constraint firstItem="HkQ-qo-gGz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LKf-7V-0Ty"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="trailing" secondItem="ckd-s0-etA" secondAttribute="trailing" id="Lkt-5g-H2H"/>
+                            <constraint firstItem="rto-bc-Syx" firstAttribute="top" secondItem="zDc-Gz-7hT" secondAttribute="bottom" constant="1" id="M54-Is-XoT"/>
+                            <constraint firstItem="zDc-Gz-7hT" firstAttribute="top" secondItem="W2C-U7-qst" secondAttribute="bottom" constant="1" id="Nsy-7M-bro"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="leading" secondItem="tUf-gc-YkB" secondAttribute="trailing" constant="1" id="PMV-eo-lSQ"/>
+                            <constraint firstItem="tUf-gc-YkB" firstAttribute="top" secondItem="4jA-tT-wuF" secondAttribute="bottom" constant="8" id="PT3-Cf-Mw5"/>
+                            <constraint firstItem="BGz-nF-DVj" firstAttribute="top" secondItem="tUf-gc-YkB" secondAttribute="top" id="PY2-Fu-aCU"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="leading" secondItem="H51-V0-7r3" secondAttribute="leading" id="PkL-gg-kqE"/>
+                            <constraint firstAttribute="trailing" secondItem="rto-bc-Syx" secondAttribute="trailing" id="QY5-b0-rcG"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="trailing" secondItem="cVA-l1-eQK" secondAttribute="trailing" id="RB2-fg-7Td"/>
+                            <constraint firstItem="UDM-4H-eYf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RJI-iQ-VCl"/>
+                            <constraint firstItem="ckd-s0-etA" firstAttribute="leading" secondItem="BGz-nF-DVj" secondAttribute="trailing" constant="1" id="UMA-uy-Eu6"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="leading" secondItem="zDc-Gz-7hT" secondAttribute="leading" id="UNS-zi-3oq"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ujb-Vd-opU"/>
+                            <constraint firstItem="BGz-nF-DVj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UpF-2v-l1t"/>
+                            <constraint firstItem="L6q-WF-rgM" firstAttribute="leading" secondItem="cVA-l1-eQK" secondAttribute="trailing" constant="1" id="UpS-b4-ZbF"/>
+                            <constraint firstItem="rto-bc-Syx" firstAttribute="top" secondItem="Ifr-WB-hrD" secondAttribute="top" id="VXf-Qn-SEr"/>
+                            <constraint firstItem="BGz-nF-DVj" firstAttribute="top" secondItem="Ig9-hs-DX3" secondAttribute="top" id="WGx-EK-kRO"/>
+                            <constraint firstItem="rto-bc-Syx" firstAttribute="top" secondItem="aqn-lN-SJh" secondAttribute="top" id="Wnc-b1-VuJ"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="trailing" secondItem="UDM-4H-eYf" secondAttribute="trailing" id="Xfk-b4-rvj"/>
+                            <constraint firstItem="BGz-nF-DVj" firstAttribute="top" secondItem="4jA-tT-wuF" secondAttribute="bottom" constant="8" id="ald-pF-Fct"/>
+                            <constraint firstItem="rto-bc-Syx" firstAttribute="top" secondItem="HkQ-qo-gGz" secondAttribute="top" id="bC4-e7-zQb"/>
+                            <constraint firstItem="tvf-Wy-Cgj" firstAttribute="leading" secondItem="H51-V0-7r3" secondAttribute="trailing" constant="1" id="c17-Vl-K0s"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="leading" secondItem="W2C-U7-qst" secondAttribute="leading" id="cFn-au-8YB"/>
+                            <constraint firstItem="UDM-4H-eYf" firstAttribute="top" secondItem="PQt-YJ-aD6" secondAttribute="top" id="cai-3c-m9m"/>
+                            <constraint firstItem="Ifr-WB-hrD" firstAttribute="trailing" secondItem="jid-3v-QlJ" secondAttribute="trailing" id="dfx-uS-Zvg"/>
+                            <constraint firstItem="rto-bc-Syx" firstAttribute="leading" secondItem="aqn-lN-SJh" secondAttribute="trailing" constant="1" id="dih-YB-JPO"/>
+                            <constraint firstAttribute="bottom" secondItem="tvf-Wy-Cgj" secondAttribute="bottom" id="dir-tY-ebr"/>
+                            <constraint firstItem="Ig9-hs-DX3" firstAttribute="leading" secondItem="rto-bc-Syx" secondAttribute="leading" id="fD2-V1-Wrq"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="top" secondItem="cVA-l1-eQK" secondAttribute="top" id="fOc-TT-jvL"/>
+                            <constraint firstItem="BGz-nF-DVj" firstAttribute="top" secondItem="ckd-s0-etA" secondAttribute="top" id="gAk-1m-yis"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="leading" secondItem="tUf-gc-YkB" secondAttribute="leading" id="jnG-l1-ZJQ"/>
+                            <constraint firstItem="H51-V0-7r3" firstAttribute="leading" secondItem="jid-3v-QlJ" secondAttribute="trailing" constant="1" id="kIa-vn-AtP"/>
+                            <constraint firstItem="aqn-lN-SJh" firstAttribute="leading" secondItem="Ifr-WB-hrD" secondAttribute="trailing" constant="1" id="kur-Xk-Wkg"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="trailing" secondItem="Ifr-WB-hrD" secondAttribute="trailing" id="lUq-PT-20n"/>
+                            <constraint firstItem="jid-3v-QlJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pHS-61-Gp2"/>
+                            <constraint firstItem="ETt-XD-0Pc" firstAttribute="trailing" secondItem="tUf-gc-YkB" secondAttribute="trailing" id="r73-bL-LkE"/>
+                            <constraint firstItem="HkQ-qo-gGz" firstAttribute="top" secondItem="UDM-4H-eYf" secondAttribute="bottom" constant="1" id="s0E-b1-5R4"/>
+                            <constraint firstItem="tUf-gc-YkB" firstAttribute="leading" secondItem="ckd-s0-etA" secondAttribute="trailing" constant="1" id="sRt-UX-ujI"/>
+                            <constraint firstAttribute="bottom" secondItem="jid-3v-QlJ" secondAttribute="bottom" id="shi-vw-gJI"/>
+                            <constraint firstItem="PEH-Vo-WmD" firstAttribute="trailing" secondItem="BGz-nF-DVj" secondAttribute="trailing" id="uov-xk-0Kv"/>
+                            <constraint firstItem="PQt-YJ-aD6" firstAttribute="trailing" secondItem="jid-3v-QlJ" secondAttribute="trailing" id="v0Z-nY-Zue"/>
+                            <constraint firstItem="aqn-lN-SJh" firstAttribute="top" secondItem="ETt-XD-0Pc" secondAttribute="bottom" constant="1" id="wBk-ed-A8D"/>
+                            <constraint firstAttribute="trailing" secondItem="W2C-U7-qst" secondAttribute="trailing" id="y8h-qQ-EeC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="J10-4R-duV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="4jA-tT-wuF" id="zRQ-ji-7aD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222.5" y="338.5"/>
+        </scene>
+    </scenes>
+</document>
