@@ -53,7 +53,7 @@ class CalculatorViewController: UIViewController {
     }
     
     func updateResultLabel() {
-        resultLabel!.text = numberFormatter.stringFromNumber(calculator.result)
+        resultLabel.text = numberFormatter.stringFromNumber(calculator.result)
     }
     
     // MARK: Performing Calculations
