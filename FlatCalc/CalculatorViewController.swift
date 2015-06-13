@@ -47,9 +47,8 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func convertResultToPercentage(button: UIButton) {
-//        calculator.result.floatValue = calculator.result.floatValue / 100.0
-//        updateResultLabel()
-        // TODO: Need to fix, still buggy. Stops after 3 decimal places.
+        calculator.result = NSNumber(float: calculator.result.floatValue / 100.0)
+        updateResultLabel()
     }
     
     func updateResultLabel() {
