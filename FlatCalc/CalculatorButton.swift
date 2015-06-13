@@ -40,10 +40,14 @@ class CalculatorButton: UIButton {
                 backgroundColor = selectedColor
             } else {
                 // Animate the background color change. This is what happens in
-                // the Calculator app in iOS 8.
-                UIView.animateWithDuration(0.35, animations: { () -> Void in
-                    self.backgroundColor = self.normalColor
-                })
+                // the Calculator app in Calculator.app.
+                UIView.animateWithDuration(0.25,
+                    delay:0,
+                    options:UIViewAnimationOptions.AllowUserInteraction,
+                    animations:{
+                        self.backgroundColor = self.normalColor
+                    },
+                    completion:nil)
             }
         }
     }
