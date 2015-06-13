@@ -34,7 +34,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var clearResultButton: UIButton!
     
-    let numberFormatter = NSNumberFormatter()
+    let resultFormatter = NSNumberFormatter()
     
     @IBAction func clearResult(clearResultButton: UIButton) {
         calculator.clearResult()
@@ -47,12 +47,13 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func convertResultToPercentage(button: UIButton) {
-        calculator.result = NSNumber(float: calculator.result.floatValue / 100.0)
+        // TODO: Still needs refining. Goes to 0 successive presses.
+        calculator.result = NSNumber(double: Double(calculator.result.doubleValue / 100.0))
         updateResultLabel()
     }
     
     func updateResultLabel() {
-        resultLabel.text = numberFormatter.stringFromNumber(calculator.result)
+        resultLabel.text = resultFormatter.stringFromNumber(calculator.result)
     }
     
     // MARK: Performing Calculations
@@ -66,6 +67,10 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Configure the number formatter.
+        resultFormatter.numberStyle = .DecimalStyle
+//        resultFormatter.maximumSignificantDigits = 8
     }
     
     // MARK: Managing the Status Bar
